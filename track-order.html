@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .track-box{width:450px;margin:5% auto;background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.15);}
+        .track-box h2{text-align:center;color:#2f3542;margin-bottom:20px;}
+        .track-box input{width:70%;padding:12px 10px;border:1px solid #ccc;border-radius:5px 0 0 5px;font-size:14px;}
+        .track-box button{width:30%;padding:12px;border:none;background:#ff6b81;color:white;border-radius:0 5px 5px 0;cursor:pointer;font-size:14px;}
+        .track-result{margin-top:20px;background:#ececec;padding:15px;border-radius:10px;display:none;}
+        .status-steps{list-style:none;margin-top:15px;padding:0;}
+        .status-steps li{padding:8px 0;color:#aaa;}
+        .status-steps li.active{color:#2ed573;font-weight:bold;}
+        .track-message{font-weight:bold;color:red;margin-top:10px;display:none;text-align:center;}
+    </style>
+</head>
+<body>
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" title="Logo">
+                    <img src="images/logo.jpg" alt="Restaurant Logo" class="image-responsive">
+                </a>
+            </div>
+            <div class="menu text-right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="food-search.html">Foods</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+    <div class="track-box">
+        <h2>Track Your Order</h2>
+        <form id="track-form" style="display:flex;">
+            <input type="number" id="order-id-input" placeholder="Enter Order ID (e.g. 12)" required>
+            <button type="submit">Track</button>
+        </form>
+
+        <p id="track-message" class="track-message"></p>
+
+        <div class="track-result" id="track-result">
+            <p><strong id="result-food"></strong></p>
+            <p id="result-qty"></p>
+            <p id="result-date"></p>
+            <ul class="status-steps" id="status-steps">
+                <li data-status="Pending">Pending</li>
+                <li data-status="Preparing">Preparing</li>
+                <li data-status="Out for Delivery">Out for Delivery</li>
+                <li data-status="Delivered">Delivered</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/track-order.js"></script>
+</body>
+</html>

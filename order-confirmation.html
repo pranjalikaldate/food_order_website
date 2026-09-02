@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .confirm-box{width:400px;margin:6% auto;background:white;padding:40px 30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.15);text-align:center;}
+        .confirm-box h2{color:#2ed573;margin-bottom:10px;}
+        .confirm-box p{margin-bottom:10px;}
+        .order-id-box{background:#ececec;padding:15px;border-radius:10px;font-weight:bold;margin:15px 0;}
+    </style>
+</head>
+<body>
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" title="Logo">
+                    <img src="images/logo.jpg" alt="Restaurant Logo" class="image-responsive">
+                </a>
+            </div>
+            <div class="menu text-right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="food-search.html">Foods</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+    <div class="confirm-box">
+        <h2>Order Placed!</h2>
+        <p>Thank you — your payment was successful and your order is confirmed.</p>
+        <div class="order-id-box" id="order-id-box"></div>
+        <p>Save this Order ID to track your delivery status.</p>
+        <a href="track-order.html" class="btn btn-primary">Track My Order</a>
+    </div>
+
+    <script>
+        document.getElementById("order-id-box").textContent =
+            "Order ID: #" + (sessionStorage.getItem("lastOrderId") || "-");
+    </script>
+</body>
+</html>

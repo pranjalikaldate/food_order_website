@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Messages</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body{background:#f4f4f4;}
+        .admin-bar{background:#2f3542;padding:15px 5%;color:white;display:flex;justify-content:space-between;align-items:center;}
+        .admin-bar a{color:#ff6b81;text-decoration:none;margin-left:15px;}
+        .dash-container{width:80%;margin:30px auto;}
+        table{width:100%;border-collapse:collapse;background:white;border-radius:10px;overflow:hidden;}
+        th, td{border:1px solid #eee;padding:10px;text-align:left;font-size:0.9rem;}
+        th{background:#ff6b81;color:white;}
+        tr:nth-child(even){background:#fafafa;}
+    </style>
+</head>
+<body>
+    <div class="admin-bar">
+        <div>Admin Panel — <span id="admin-name"></span></div>
+        <div><a href="dashboard.html">Dashboard</a><a href="#" id="logout-link">Logout</a></div>
+    </div>
+
+    <div class="dash-container">
+        <h2 style="margin-bottom:20px;color:#2f3542;">Contact Messages</h2>
+        <table>
+            <thead>
+                <tr><th>#</th><th>Name</th><th>Email</th><th>Phone</th><th>Submitted</th></tr>
+            </thead>
+            <tbody id="contacts-body"></tbody>
+        </table>
+    </div>
+
+    <script src="js/admin-guard.js"></script>
+    <script src="js/admin-contacts.js"></script>
+</body>
+</html>

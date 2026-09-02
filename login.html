@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .auth-box{width:350px;margin:5% auto;background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.15);text-align:center;}
+        .auth-box h2{margin-bottom:20px;color:#2f3542;}
+        .auth-box input{width:100%;padding:12px 10px;margin-bottom:15px;border:1px solid #ccc;border-radius:5px;font-size:14px;}
+        .auth-box p{margin-top:15px;font-size:13px;color:#777;}
+        .auth-message{font-weight:bold;margin-bottom:10px;display:none;}
+    </style>
+</head>
+<body>
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" title="Logo">
+                    <img src="images/logo.jpg" alt="Restaurant Logo" class="image-responsive">
+                </a>
+            </div>
+            <div class="menu text-right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="food-search.html">Foods</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+    <div class="auth-box">
+        <h2>Login</h2>
+        <p id="auth-message" class="auth-message"></p>
+        <form id="login-form">
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login" class="btn btn-primary" style="width:100%;">
+        </form>
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+        <p><a href="forgot-password.html">Forgot Password?</a></p>
+    </div>
+
+    <section class="footer">
+        <div class="container text-center">
+            <p>All rights reserved. Designed By <a href="#">Pranjali_Kaldate</a></p>
+        </div>
+    </section>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

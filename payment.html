@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .payment-box{width:400px;margin:4% auto;background:white;padding:30px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.15);}
+        .payment-box h2{margin-bottom:10px;color:#2f3542;text-align:center;}
+        .demo-notice{background:#fff3cd;color:#856404;padding:10px;border-radius:5px;font-size:13px;margin-bottom:20px;text-align:center;}
+        .order-summary{background:#ececec;padding:15px;border-radius:10px;margin-bottom:20px;}
+        .order-summary p{margin:5px 0;font-size:14px;}
+        .payment-box input{width:100%;padding:12px 10px;margin-bottom:15px;border:1px solid #ccc;border-radius:5px;font-size:14px;}
+        .row-2{display:flex;gap:10px;}
+        .row-2 input{width:50%;}
+        .pay-message{font-weight:bold;margin-bottom:10px;display:none;text-align:center;}
+    </style>
+</head>
+<body>
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" title="Logo">
+                    <img src="images/logo.jpg" alt="Restaurant Logo" class="image-responsive">
+                </a>
+            </div>
+            <div class="menu text-right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="food-search.html">Foods</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+    <div class="payment-box">
+        <h2>Payment</h2>
+        <p class="demo-notice">This is a demo payment form for project purposes — no real card is charged and no card details are stored.</p>
+
+        <div class="order-summary" id="order-summary"></div>
+
+        <p id="pay-message" class="pay-message"></p>
+
+        <form id="payment-form">
+            <input type="text" id="card-number" placeholder="Card Number (e.g. 4111 1111 1111 1111)" maxlength="19" required>
+            <div class="row-2">
+                <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5" required>
+                <input type="text" id="card-cvv" placeholder="CVV" maxlength="3" required>
+            </div>
+            <input type="text" id="card-name" placeholder="Name on Card" required>
+            <input type="submit" value="Pay Now" class="btn btn-primary" style="width:100%;">
+        </form>
+    </div>
+
+    <section class="footer">
+        <div class="container text-center">
+            <p>All rights reserved. Designed By <a href="#">Pranjali_Kaldate</a></p>
+        </div>
+    </section>
+
+    <script src="js/payment.js"></script>
+</body>
+</html>

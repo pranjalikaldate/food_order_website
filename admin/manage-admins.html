@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Admins</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body{background:#f4f4f4;}
+        .admin-bar{background:#2f3542;padding:15px 5%;color:white;display:flex;justify-content:space-between;align-items:center;}
+        .admin-bar a{color:#ff6b81;text-decoration:none;margin-left:15px;}
+        .dash-container{width:70%;margin:30px auto;}
+        .add-box{background:white;padding:20px;border-radius:10px;margin-bottom:20px;box-shadow:0 5px 15px rgba(0,0,0,0.08);}
+        .add-box input{padding:10px;margin-right:10px;border:1px solid #ccc;border-radius:5px;}
+        table{width:100%;border-collapse:collapse;background:white;border-radius:10px;overflow:hidden;}
+        th, td{border:1px solid #eee;padding:10px;text-align:left;}
+        th{background:#ff6b81;color:white;}
+        tr:nth-child(even){background:#fafafa;}
+        .row-actions button{margin-right:8px;padding:5px 10px;border:none;border-radius:5px;cursor:pointer;}
+        .btn-change{background:#70a1ff;color:white;}
+        .btn-delete{background:#ff4757;color:white;}
+        .form-message{font-weight:bold;margin-bottom:10px;display:none;}
+    </style>
+</head>
+<body>
+    <div class="admin-bar">
+        <div>Admin Panel — <span id="admin-name"></span></div>
+        <div><a href="dashboard.html">Dashboard</a><a href="#" id="logout-link">Logout</a></div>
+    </div>
+
+    <div class="dash-container">
+        <h2 style="margin-bottom:20px;color:#2f3542;">Manage Admins</h2>
+
+        <div class="add-box">
+            <p id="form-message" class="form-message"></p>
+            <form id="add-admin-form">
+                <input type="text" id="new-username" placeholder="New admin username" required>
+                <input type="password" id="new-password" placeholder="Password (min 6 chars)" required minlength="6">
+                <input type="submit" value="Add Admin" class="btn btn-primary">
+            </form>
+        </div>
+
+        <table>
+            <thead>
+                <tr><th>ID</th><th>Username</th><th>Actions</th></tr>
+            </thead>
+            <tbody id="admins-body"></tbody>
+        </table>
+    </div>
+
+    <script src="js/admin-guard.js"></script>
+    <script src="js/admin-manage.js"></script>
+</body>
+</html>

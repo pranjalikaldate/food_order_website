@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Food Item</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body{background:#f4f4f4;}
+        .admin-bar{background:#2f3542;padding:15px 5%;color:white;display:flex;justify-content:space-between;align-items:center;}
+        .admin-bar a{color:#ff6b81;text-decoration:none;margin-left:15px;}
+        .form-box{width:450px;margin:40px auto;background:white;padding:30px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.08);}
+        .form-box h2{color:#2f3542;margin-bottom:20px;}
+        .form-box input, .form-box select, .form-box textarea{width:100%;padding:12px 10px;margin-bottom:15px;border:1px solid #ccc;border-radius:5px;font-size:14px;}
+        .form-message{font-weight:bold;margin-bottom:10px;display:none;}
+    </style>
+</head>
+<body>
+    <div class="admin-bar">
+        <div>Admin Panel — <span id="admin-name"></span></div>
+        <div><a href="dashboard.html">Dashboard</a><a href="#" id="logout-link">Logout</a></div>
+    </div>
+
+    <div class="form-box">
+        <h2>Add New Food Item</h2>
+        <p id="form-message" class="form-message"></p>
+        <form id="add-food-form" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Food Name" required>
+            <input type="number" name="price" step="1" placeholder="Price (Rs.)" required>
+            <select name="category_id" id="category-select" required>
+                <option value="">Select Category</option>
+            </select>
+            <textarea name="description" rows="3" placeholder="Description" required></textarea>
+            <input type="file" name="image" accept="image/*" required>
+            <input type="submit" value="Add Food Item" class="btn btn-primary" style="width:100%;">
+        </form>
+    </div>
+
+    <script src="js/admin-guard.js"></script>
+    <script src="js/admin-add-food.js"></script>
+</body>
+</html>

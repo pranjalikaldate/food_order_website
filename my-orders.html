@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .orders-container{width:80%;margin:30px auto;}
+        table{width:100%;border-collapse:collapse;background:white;border-radius:10px;overflow:hidden;}
+        th, td{border:1px solid #eee;padding:10px;text-align:left;font-size:0.9rem;}
+        th{background:#ff6b81;color:white;}
+        tr:nth-child(even){background:#fafafa;}
+        .empty-msg{text-align:center;padding:30px;color:#888;}
+    </style>
+</head>
+<body>
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" title="Logo">
+                    <img src="images/logo.jpg" alt="Restaurant Logo" class="image-responsive">
+                </a>
+            </div>
+            <div class="menu text-right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="food-search.html">Foods</a></li>
+                    <li><a href="track-order.html">Track Order</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="nav-account"></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+    <div class="orders-container">
+        <h2 style="margin-bottom:20px;color:#2f3542;">My Orders</h2>
+        <table id="orders-table" style="display:none;">
+            <thead>
+                <tr><th>#</th><th>Food</th><th>Qty</th><th>Status</th><th>Payment</th><th>Date</th></tr>
+            </thead>
+            <tbody id="orders-body"></tbody>
+        </table>
+        <p class="empty-msg" id="empty-msg" style="display:none;">You haven't placed any orders yet.</p>
+    </div>
+
+    <script src="js/account-nav.js"></script>
+    <script src="js/my-orders.js"></script>
+</body>
+</html>

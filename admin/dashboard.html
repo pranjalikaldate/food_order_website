@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body{background:#f4f4f4;}
+        .admin-bar{background:#2f3542;padding:15px 5%;color:white;display:flex;justify-content:space-between;align-items:center;}
+        .admin-bar a{color:#ff6b81;text-decoration:none;margin-left:15px;}
+        .dash-container{width:80%;margin:40px auto;}
+        .dash-cards{display:flex;gap:20px;flex-wrap:wrap;}
+        .dash-card{background:white;padding:30px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.08);flex:1;min-width:220px;text-align:center;}
+        .dash-card h3{color:#2f3542;margin-bottom:10px;}
+        .dash-card a{display:inline-block;margin-top:10px;}
+    </style>
+</head>
+<body>
+    <div class="admin-bar">
+        <div>Admin Panel — <span id="admin-name"></span></div>
+        <div><a href="#" id="logout-link">Logout</a></div>
+    </div>
+
+    <div class="dash-container">
+        <h2 style="margin-bottom:20px;color:#2f3542;">Dashboard</h2>
+        <div class="dash-cards">
+            <div class="dash-card">
+                <h3>Orders</h3>
+                <p>View and update order delivery status</p>
+                <a href="orders.html" class="btn btn-primary">Manage Orders</a>
+            </div>
+            <div class="dash-card">
+                <h3>Food Items</h3>
+                <p>Add, edit, or delete menu items</p>
+                <a href="add-food.html" class="btn btn-primary">Add Food</a>
+                <a href="manage-food.html" class="btn btn-primary">Edit / Delete Food</a>
+            </div>
+            <div class="dash-card">
+                <h3>Categories</h3>
+                <p>Add, edit, or delete menu categories</p>
+                <a href="manage-categories.html" class="btn btn-primary">Manage Categories</a>
+            </div>
+            <div class="dash-card">
+                <h3>Contact Messages</h3>
+                <p>View messages submitted through the Contact page</p>
+                <a href="contacts.html" class="btn btn-primary">View Messages</a>
+            </div>
+            <div class="dash-card">
+                <h3>Admins</h3>
+                <p>Add, update, or remove admin accounts</p>
+                <a href="manage-admins.html" class="btn btn-primary">Manage Admins</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin-guard.js"></script>
+</body>
+</html>

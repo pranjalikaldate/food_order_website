@@ -1,4 +1,4 @@
-# Vijay Thapa Restaurant — Complete Food Order Website
+# Online Food Ordering Website
 
 Full-stack food ordering site: HTML5/CSS3 static frontend + PHP/MySQL backend, with customer accounts, demo payment, order tracking, and an admin panel with image upload.
 
